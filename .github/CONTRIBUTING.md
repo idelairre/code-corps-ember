@@ -12,9 +12,9 @@ Thanks for thinking about helping! How would you like to help?
 
 1. [Fork the repo](https://help.github.com/articles/fork-a-repo/).
 
-2. Read and work through [the installation guide](docs/INSTALLING.md).
+2. Read and work through [the installation guide](../docs/INSTALLING.md).
 
-3. Run the tests. We only take pull requests with passing tests, and it's great to know that you have a clean slate: `ember exam`. More information on testing commands can be found [here](docs/USAGE.md#running-tests)
+3. Run the tests. We only take pull requests with passing tests, and it's great to know that you have a clean slate: `ember exam`. More information on testing commands can be found [here](../docs/USAGE.md#running-tests)
 
 Okay, you're ready to go!
 
@@ -40,7 +40,7 @@ Once you've created the issue, you can [make your changes and push them up](#how
 
 ## What kind of documentation are you writing?
 
-- [I want to document the codebase](#improving-YUIDoc-docs).
+- [I want to document the codebase](#improving-ember-docs).
 - [I want to improve the docs on GitHub.](#improving-the-readme)
 
 ### Improving Ember docs
@@ -57,7 +57,7 @@ You can learn about how to write documentation with YUIDoc from these places:
 
 [Done with your changes?](#i-finished-my-changes)
 
-## Improving the README
+### Improving the README
 
 If you're just looking to improve the README, there's a couple things you should know:
 
@@ -78,17 +78,17 @@ Then start writing some code:
 
 1. Make the tests fail.
 
-  Identify what's happening in the bug with a test. This way the bug is reproducible for everyone else in the project, and we won't regress into making the bug ever again (hopefully!).
+   Identify what's happening in the bug with a test. This way the bug is reproducible for everyone else in the project, and we won't regress into making the bug ever again (hopefully!).
 
 2. Make the tests pass again.
 
-  Write your code that fixes the bug and makes it pass.
+   Write your code that fixes the bug and makes it pass.
 
 [Done with your changes?](#i-finished-my-changes)
 
-## How to refactor some code
+## How to refactor code
 
-Refactoring code shouldn't require any new tests, but you should [make sure the tests still pass](#running-tests).
+Refactoring code shouldn't require any new tests, but you should [make sure the tests still pass](../docs/USAGE.md#running-tests).
 
 [Done with your refactoring?](#i-finished-my-changes)
 
@@ -98,11 +98,11 @@ When you're ready to write some new code, you should do the following:
 
 1. Write some documentation for your change.
 
-  Why do this first? Well, if you know the behavior you want to see, then it's easier to validate if it works as expected. Think of this as documentation-driven development.
+   Why do this first? Well, if you know the behavior you want to see, then it's easier to validate if it works as expected. Think of this as documentation-driven development.
 
-  [What kind of documentation are you writing?](#what-kind-of-documentation-are-you-writing)
+   [What kind of documentation are you writing?](#what-kind-of-documentation-are-you-writing)
 
-2. Add a test for your change. [Here's how to run tests.](#running-tests)
+2. Add a test for your change. [Here's how to run tests.](../docs/USAGE.md#running-tests)
 
 3. Make the test pass.
 
@@ -147,14 +147,3 @@ The CircleCI builds also rely on some environment variables for reporting, deplo
 If you've had a pull request reviewed and accepted, congratulations! Before we can merge your changes, we'll need you to rebase off `origin/develop` and squash your commits into one. This will give us a cleaner git history.
 
 Never done this before? No problem. [We'll walk you through it in our guide](../docs/SQUASHING.md), and you can read [a deeper guide about rewriting history to understand more](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).
-
-## Running Tests
-
-
-
-
-
-### Testing helpers
-
-
-
