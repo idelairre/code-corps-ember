@@ -51,9 +51,8 @@ We use YUIDoc to document our code.
 
 You can learn about how to write documentation with YUIDoc from these places:
 
-- 
-- 
-- 
+- Our [Styleguide](../docs/STYLEGUIDE.md#Documentation)
+- YUIDoc's [syntax guide](http://yui.github.io/yuidoc/syntax/index.html)
 
 [Done with your changes?](#i-finished-my-changes)
 
