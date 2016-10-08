@@ -51,7 +51,7 @@ We use YUIDoc to document our code.
 
 You can learn about how to write documentation with YUIDoc from these places:
 
-- Our [Styleguide](../docs/STYLEGUIDE.md#Documentation)
+- Our [style guide](../docs/STYLEGUIDE.md#Documentation)
 - YUIDoc's [syntax guide](http://yui.github.io/yuidoc/syntax/index.html)
 
 [Done with your changes?](#i-finished-my-changes)
@@ -69,7 +69,7 @@ If you're just looking to improve the README, there's a couple things you should
 
 ## How to fix a bug
 
-If you're fixing a bug that's already been added to the issues, ask yourself whether the bug description is clear? Do you know what circumstances led to the bug? Does it seem easy to reproduce?
+If you're fixing a bug that's already been added to the issues, ask yourself whether the bug description is clear. Do you know what circumstances led to the bug? Does it seem easy to reproduce?
 
 If you've spotted a bug yourself, open an issue and try to answer those questions.
 
@@ -77,11 +77,11 @@ Then start writing some code:
 
 1. Make the tests fail.
 
-   Identify what's happening in the bug with a test. This way the bug is reproducible for everyone else in the project, and we won't regress into making the bug ever again (hopefully!).
+Identify what's happening in the bug with a test. This way the bug is reproducible for everyone else in the project, and we won't regress into making the bug ever again (hopefully!).
 
 2. Make the tests pass again.
 
-   Write your code that fixes the bug and makes it pass.
+Write your code that fixes the bug and makes it pass.
 
 [Done with your changes?](#i-finished-my-changes)
 
@@ -97,9 +97,9 @@ When you're ready to write some new code, you should do the following:
 
 1. Write some documentation for your change.
 
-   Why do this first? Well, if you know the behavior you want to see, then it's easier to validate if it works as expected. Think of this as documentation-driven development.
+Why do this first? Well, if you know the behavior you want to see, then it's easier to validate if it works as expected. Think of this as documentation-driven development.
 
-   [What kind of documentation are you writing?](#what-kind-of-documentation-are-you-writing)
+[What kind of documentation are you writing?](#what-kind-of-documentation-are-you-writing)
 
 2. Add a test for your change. [Here's how to run tests.](../docs/USAGE.md#running-tests)
 
