@@ -8,6 +8,8 @@ Thanks for thinking about helping! How would you like to help?
 - [I want to refactor some code.](#how-to-refactor-code)
 - [I don't know how to help.](#what-if-i-dont-know-how-to-help)
 
+Also, check out our [workflow](#using-git-effectively) and [recommended tools](#recommended-tools).
+
 ## Before you get started
 
 1. [Fork the repo](https://help.github.com/articles/fork-a-repo/).
@@ -37,6 +39,8 @@ For example, let's say we wanted to write some Slack integration for new comment
 You may want to go deeper into detail. Posting screenshots of designs or expected test cases and scenarios are even more helpful. Place yourself in the shoes of the person who's going to accomplish the task – even if that person is you. What steps should I be taking next to finish this task?
 
 Once you've created the issue, you can [make your changes and push them up](#how-to-write-new-code).
+
+New to git? Check out [Using Git effectively](#using-git-effectively).
 
 ## What kind of documentation are you writing?
 
@@ -146,3 +150,59 @@ The CircleCI builds also rely on some environment variables for reporting, deplo
 If you've had a pull request reviewed and accepted, congratulations! Before we can merge your changes, we'll need you to rebase off `origin/develop` and squash your commits into one. This will give us a cleaner git history.
 
 Never done this before? No problem. [We'll walk you through it in our guide](../docs/SQUASHING.md), and you can read [a deeper guide about rewriting history to understand more](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).
+
+## Using Git effectively
+
+When making code changes with Git, it is best to develop a workflow. Every 'feature', which can be anything from a 1-line change to an entire component, should be done on a seperate feature branch.
+
+Let's say you are working on issue 6000, which requests that the `needs_coffee` property of `programmer` be changed to a constant that always returns `true`. You'll make the following steps:
+
+1. Check out the code, or fetch any updates from github.
+
+2. Assign yourself the issue (if you aren't a contributor yet, comment that you are working on it)
+
+3. Create a new feature branch:
+
+```shell
+git branch <feature-name>
+```
+
+For the `<feature-name>`, use our naming standard: `[issue#]-[adds|removes|updates]-[description]`
+
+So, for the issue you just assigned yourself, the feature name would be `6000-updates-programmer-coffee-property`. In most cases, adds, removes, and updates will suffice. If none of those options make sense use another present-tense verb. The description component of the feature name should also be in present-tense. Note the use of hyphens (-) to seperate all words.
+
+4. Checkout your feature branch:
+
+```shell
+git checkout <your-feature-branch>
+```
+
+5. Make your changes and push commits to your feature branch often
+
+6. Once you've finished, make a [pull request](#i-finished-my-changes).
+
+To learn more about this workflow, check out [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html).
+
+## Recommended Tools
+
+### Hub
+
+GitHub has released a tool that can aid working with GitHub via the command line. [Check it out!](https://github.com/github/hub) It's called `hub` and it makes cloning repositories and making pull requests a breeze.
+
+### Bash Git Completion
+
+Bash user? Check out [bash git completion](https://git-scm.com/book/en/v2/Git-in-Other-Environments-Git-in-Bash) which adds helpful information to your prompt about which branch you are currently in, adds tab completion of git commands, and gives you helpful status information on your files.
+
+### Windows/PowerShell
+
+If you are a Windows user, you should really be using Powershell as your command line (especially since it adopts bash aliases for most cmd.exe functions).
+
+[Install `posh-git`](https://github.com/dahlbyk/posh-git) which, like bash git completion, provides tab completion and helpful repository info in your prompt.
+
+You'll probably want to keep some sort of Bash emulator on hand. Git comes with it's own bash shell, but its not very good. Fortunately there are a few other great options:
+
+- [ConEmu](http://conemu.github.io/) is a fantastic console emulator that comes with two bash options.
+- [Cmder](http://cmder.net/) is ConEmu on steroids with Monokai console coloring and git bash completion, Posh-git, and oh-my-posh already installed
+- [Windows Subsystem for Linux](https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/) More complex to use, but it gives you a full bash shell in an Ubuntu enviornment.
+
+
