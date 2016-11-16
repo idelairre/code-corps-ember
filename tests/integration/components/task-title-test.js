@@ -2,29 +2,35 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import Ember from 'ember';
 
-let mockCurrentUser = Ember.Service.extend({
+const {
+  Object,
+  RSVP,
+  Service
+} = Ember;
+
+let mockCurrentUser = Service.extend({
   user: {
     id: 1
   }
 });
 
-let mockDifferentUser = Ember.Service.extend({
+let mockDifferentUser = Service.extend({
   user: {
     id: 2
   }
 });
 
-let mockTask = Ember.Object.create({
+let mockTask = Object.create({
   title: 'Original title',
   body: 'A <strong>body</strong>',
   number: 12,
   taskType: 'issue',
   user: {
-    id: 1,
+    id: 1
   },
   save() {
     this.set('title', this.get('title'));
-    return Ember.RSVP.resolve();
+    return RSVP.resolve();
   }
 });
 
@@ -47,7 +53,6 @@ test('it is not editable if not the right user', function(assert) {
   this.render(hbs`{{task-title}}`);
   assert.equal(this.$('.task-title .edit').length, 0);
 });
-
 
 test('it switches between edit and view mode', function(assert) {
   assert.expect(8);
@@ -75,7 +80,10 @@ test('it saves', function(assert) {
   this.register('service:current-user', mockCurrentUser);
 
   this.set('task', mockTask);
-  this.render(hbs`{{task-title task=task}}`);
+  this.on('applyEdit', () => {
+    return RSVP.resolve();
+  });
+  this.render(hbs`{{task-title task=task saveTask=(action "applyEdit")}}`);
 
   assert.equal(this.$('.task-title .title').text().trim(), 'Original title #12', 'The original title is right');
 
